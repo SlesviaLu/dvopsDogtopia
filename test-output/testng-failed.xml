@@ -5,9 +5,11 @@
     <classes>
       <class name="com.dvops.maven.eclipse.DVOPSTest">
         <methods>
-          <include name="addReview"/>
+          <include name="checkAboutUs"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
+          <include name="checkAddReview"/>
+          <include name="checkSignUp"/>
         </methods>
       </class> <!-- com.dvops.maven.eclipse.DVOPSTest -->
     </classes>
