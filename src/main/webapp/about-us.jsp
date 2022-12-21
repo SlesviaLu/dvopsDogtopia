@@ -16,9 +16,8 @@
 			<img class="logo" src="DVOPS-DOGTOPIA.jpg" width="18%">
 			<div class="tabs">
 				<a class="top_title" href="index.jsp"> HOME</a> <a
-					class="top_title_main" href="about-us.jsp"> ABOUT US</a> <a
-					class="top_title" href="care.jsp"> CARE</a> <a class="top_title"
-					href="signUp.jsp"> ACCOUNT</a>
+					class="top_title_main" href="about-us.jsp"> ABOUT US</a> 
+					<a class="top_title" href="signUp.jsp"> ACCOUNT</a>
 			</div>
 		</div>
 	</nav>
