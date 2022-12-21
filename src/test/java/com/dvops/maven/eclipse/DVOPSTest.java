@@ -12,6 +12,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
 public class DVOPSTest {
+	  //Note: In the future, when using cssSelector, we can find the values inside a div/img/a/etc using the following format:
+	  //{div/img/a/etc} [ {attribute(Like src, href, etc)} = "{value of said attribute}" ]
+	
 	  //declare Selenium WebDriver
 	  private WebDriver webDriver;	
   @Test
@@ -23,53 +26,67 @@ public class DVOPSTest {
 	    //Just making the window be clickable, idk why selenium really likes to click outside of the area. 
 	    webDriver.manage().window().setSize(new Dimension(1388, 824));
 	    
-	    //Find clickable img
+	    //Find clickable img. 
 	    webDriver.findElement(By.cssSelector("img[src='german-shepherd.jpg']")).click();
 	    
-	    //Click add review button
+	    //Click add review button.
 	    webDriver.findElement(By.linkText("ADD A REVIEW")).click();
 	    
-	    //Confirm that it works
+	    //Confirm that it works by comparing the Title of the addReview.jsp.
 	    Assert.assertEquals(webDriver.getTitle(), "Dogtopia Add Review");
 	  }
   
   
   @Test
   public void checkSignUp() {
-	  	//Note: Must have server running to access the following test
+	  	//Note: Must have server running to access the following test.
 	    webDriver.navigate().to("http://localhost:8080/dvopsDogtopia/");
 	    
-	    //For some reason selenium doesnt want to cooperate, so I decided to do a more "horrible" fix and make it work
+	    //For some reason selenium doesnt want to cooperate, so I decided to do a more "horrible" fix and make it work.
 	    //Just making the window be clickable, idk why selenium really likes to click outside of the area. 
 	    webDriver.manage().window().setSize(new Dimension(1388, 824));
 	    
-	    //Find clickable img
+	    //Find and click signUp page link.
 	    webDriver.findElement(By.cssSelector("a[href='signUp.jsp']")).click();
 	    
-	    //Click add review button
+	    //Find and click login page link.
 	    webDriver.findElement(By.cssSelector("a[href='login.jsp']")).click();
 	    
-	    //Confirm that it works
+	    //Confirm that it works by comparing the Text inside accountTitle.
 	    Assert.assertEquals(webDriver.findElement(By.className("accountTitle")).getText(), "Please sign in.");
 	  }
   
-
+  @Test
+  public void checkAboutUs() {
+	  	//Note: Must have server running to access the following test.
+	    webDriver.navigate().to("http://localhost:8080/dvopsDogtopia/");
+	    
+	    //For some reason selenium doesnt want to cooperate, so I decided to do a more "horrible" fix and make it work.
+	    //Just making the window be clickable, idk why selenium really likes to click outside of the area. 
+	    webDriver.manage().window().setSize(new Dimension(1388, 824));
+	    
+	    //Find and click about-us link.
+	    webDriver.findElement(By.cssSelector("a[href='about-us.jsp']")).click();
+	    
+	    //Confirm that it works by comparing the Text inside aboutUsTitle.
+	    Assert.assertEquals(webDriver.findElement(By.className("aboutUsTitle")).getText(), "About us");
+	  }
   
   @BeforeTest
   public void beforeTest() {
-	  //Setting system properties of ChromeDriver
-	  //to amend directory path base on your local file path
+	  //Setting system properties of ChromeDriver.
+	  //to amend directory path base on your local file path.
 	  String chromeDriverDir = "C:\\Program Files\\Google\\Chrome\\chromedriver.exe";
 
 	  System.setProperty("webdriver.chrome.driver", chromeDriverDir);
 
-	  //initialize FirefoxDriver at the start of test
+	  //initialize FirefoxDriver at the start of test.
 	  webDriver = new ChromeDriver();  
   }
 
   @AfterTest
   public void afterTest() {
-	  //Quit the ChromeDriver and close all associated window at the end of test
+	  //Quit the ChromeDriver and close all associated window at the end of test.
 	  webDriver.quit();	
   }
 

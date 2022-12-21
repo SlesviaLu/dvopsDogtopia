@@ -23,7 +23,7 @@
 	</nav>
 	<div style="margin-left: 8vw; margin-top: 15vh;">
 		<img class="testing" src="dog_image_1.png" width="31%">
-		<div style="float:right; margin-top: 1vh; margin-right: 51vw; font-size: 2.25rem; font-weight: 500; font-family: Omnes; color: #F95738">About us</div>
+		<div class="aboutUsTitle" style="float:right; margin-top: 1vh; margin-right: 51vw; font-size: 2.25rem; font-weight: 500; font-family: Omnes; color: #F95738">About us</div>
 		<div style="float:right; margin-top: -70vh; margin-right: 10%; margin-left: -10vw; font-size: 1.4rem; font-weight: 300;">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>
 			incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud <br>
