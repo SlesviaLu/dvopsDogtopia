@@ -13,18 +13,22 @@
 <body style="background-color: #FAF0CA;">
 	<nav class="navbar navbar-expand-md">
 		<div>
-			<img class="logo" src="DVOPS-DOGTOPIA.jpg" width="18%">
+			<a href="<%=request.getContextPath()%>/DogServlet/home"><img
+				class="logo" src="<%=request.getContextPath()%>/DVOPS-DOGTOPIA.jpg"
+				width="18%"> </a>
 			<div class="tabs">
-				<a class="top_title" href="index.jsp"> HOME</a> 
-				<a class="top_title" href="about-us.jsp"> ABOUT US</a> 
-				<a class="top_title_main" href="signUp.jsp"> ACCOUNT</a>
+				<a id="homeNav" class="top_title" href="<%=request.getContextPath()%>/DogServlet/home"> HOME</a> <a
+					id="aboutUsNav" class="top_title"
+					href="<%=request.getContextPath()%>/about-us.jsp"> ABOUT US</a> <a
+					class="top_title_main" href="signUp.jsp"> ACCOUNT</a>
 			</div>
 
 		</div>
 	</nav>
 	<div class="accountformPositioning">
 		<div class="accountTitle">Please sign up.</div>
-		<form action="<%=request.getContextPath()%>/UserServlet/register" method="post">
+		<form action="<%=request.getContextPath()%>/UserServlet/register"
+			method="post">
 			<div class="accountForm">
 
 				<div class="inputTitle1">Name</div>
@@ -35,8 +39,9 @@
 				<input type="password" class="inputBox" name="rpassword">
 
 			</div>
-			<a id="loginJspLink" href="login.jsp" class="linkToSignIn">Have An Account? Sign In Here</a> 
-			<input class="formButton" type="submit" value="Sign Up" />
+			<a id="loginJspLink" href="login.jsp" class="linkToSignIn">Have
+				An Account? Sign In Here</a> <input class="formButton" type="submit"
+				value="Sign Up" />
 		</form>
 	</div>
 </body>

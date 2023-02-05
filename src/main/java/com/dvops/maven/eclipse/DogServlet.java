@@ -145,15 +145,14 @@ public class DogServlet extends HttpServlet {
 			System.out.println(review);
 			System.out.println(rating);
 			System.out.println("add review called2");
-			// If either username, email or password is null or empty, user form wont go
-			// through
+			// If either username or review is null or empty, user form wont go through
 			if (review != null && review != "" && username != null && username != "") {
 
-				// Call user sign up function in UserCollection.java
+				// Call add review function in ReviewCollection.java
 				boolean reviewww = reviewCollection.addReview(new Review(username, dogName, review, rating));
 				System.out.println(reviewww);
 				System.out.println(reviewCollection.reviews);
-//				String dogUrl = "location='http://localhost:8080/dvopsDogtopia/DogServlet/desc?name="+ dogName + "'";
+				//alert to tell user the review has been added and reroutes user back to home page
 				String dogUrl = "location='http://localhost:8080/dvopsDogtopia/DogServlet/home'";
 				PrintWriter out = response.getWriter();
 				out.println("<script type=\"text/javascript\">");
@@ -165,11 +164,11 @@ public class DogServlet extends HttpServlet {
 			}
 
 			else {
-				// Just adding a alert whenever the user fails the form
+				// adding a alert whenever the user fails the form
 				PrintWriter out = response.getWriter();
 				out.println("<script type=\"text/javascript\">");
 				out.println("alert('form failed');");
-				out.println("location='http://localhost:8080/dvopsDogtopia/dogDesc.jsp';");
+				out.println("location='http://localhost:8080/dvopsDogtopia/DogServlet/home';");
 				out.println("</script>");
 			}
 		}
@@ -186,8 +185,6 @@ public class DogServlet extends HttpServlet {
 		System.out.println(dogName);
 		System.out.println(' ');
 
-		// Need to use this method as both functions are under the same form.
-
 		System.out.println("Update called");
 
 		
@@ -196,7 +193,7 @@ public class DogServlet extends HttpServlet {
 			
 			if (request.getParameter("urating") != "" && request.getParameter("urating") != null) {
 
-				// Getting extra fields needed to edit user.
+				// Getting extra fields needed to edit review.
 				String review = request.getParameter("ureview");
 				int rating = Integer.parseInt(request.getParameter("urating"));
 
@@ -209,14 +206,14 @@ public class DogServlet extends HttpServlet {
 				request.getSession().setAttribute("review", review);
 				request.getSession().setAttribute("rating", rating);
 
-				// Redirect the user to dogDesc.jsp
+				// Redirect the user to home
 				PrintWriter out = response.getWriter();
 				out.println("<script type=\"text/javascript\">");
 				out.println("alert('review edited');");
 				out.println("location='http://localhost:8080/dvopsDogtopia/DogServlet/home';");
 				out.println("</script>"); 
 			} else {
-				// Alerting the user that their review and rating cannot be empty
+				// Alerts the user that their review and rating cannot be empty
 				PrintWriter out = response.getWriter();
 				out.println("<script type=\"text/javascript\">");
 				out.println("alert('review and rating cannot be empty!');");
@@ -231,7 +228,7 @@ public class DogServlet extends HttpServlet {
 			throws ServletException, IOException {
 		System.out.println("Delete review called");
 
-		// Setting Strings usable on both functions 
+		// Setting Strings usable on function
 		String username = (String) request.getSession().getAttribute("username");
 		String dogName = request.getParameter("ddogName");
 		System.out.println(username);
@@ -241,7 +238,7 @@ public class DogServlet extends HttpServlet {
 		if (request.getParameter("deleteReview") != null) {
 			System.out.println("Delete Review called");
 
-			// Call delete user function in UserCollection.java
+			// Call delete review function in ReviewCollection.java and reroutes user back to home
 			reviewCollection.deleteReview(username, dogName);
 			String dogUrl = "location='http://localhost:8080/dvopsDogtopia/DogServlet/home'";
 			PrintWriter out = response.getWriter();
@@ -250,13 +247,29 @@ public class DogServlet extends HttpServlet {
 			out.println(dogUrl);
 			out.println("</script>");
 
-			// Redirect the user to index.jsp
-			/*
-			 * response.sendRedirect("http://localhost:8080/dvopsDogtopia/DogServlet/home");
-			 */
 		}
 		;
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

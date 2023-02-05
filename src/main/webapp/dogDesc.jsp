@@ -19,12 +19,12 @@
 <body>
 	<nav class="navbar">
 		<div>
-			<a href="<%=request.getContextPath()%>/ReviewServlet/editReview?udogName=${param['name']}"><img
+			<a href="<%=request.getContextPath()%>/DogServlet/home"><img
 				class="logo" src="<%=request.getContextPath()%>/DVOPS-DOGTOPIA.jpg"
 				width="18%"> </a>
 			<div class="tabs">
 				<a class="top_title"
-					href="<%=request.getContextPath()%>/DogServlet/home.jsp"> HOME</a>
+					href="<%=request.getContextPath()%>/DogServlet/home"> HOME</a>
 				<a class="top_title"
 					href="<%=request.getContextPath()%>/about-us.jsp"> ABOUT US</a>
 				<c:if test='${sessionScope.username == null}'>
