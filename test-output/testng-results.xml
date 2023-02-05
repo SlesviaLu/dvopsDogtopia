@@ -1,49 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-02T22:00:22 SGT" name="Default suite" finished-at="2023-02-02T22:00:22 SGT" duration-ms="41">
+  <suite started-at="2023-02-04T21:25:16 SGT" name="Default suite" finished-at="2023-02-04T21:25:24 SGT" duration-ms="8528">
     <groups>
     </groups>
-    <test started-at="2023-02-02T22:00:22 SGT" name="Default test" finished-at="2023-02-02T22:00:22 SGT" duration-ms="41">
-      <class name="com.dvops.maven.eclipse.DogCollectionTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.dvops.maven.eclipse.DogCollectionTest@5f683daf]" started-at="2023-02-02T22:00:22 SGT" name="setUp" finished-at="2023-02-02T22:00:22 SGT" duration-ms="5" status="PASS">
+    <test started-at="2023-02-04T21:25:16 SGT" name="Default test" finished-at="2023-02-04T21:25:24 SGT" duration-ms="8528">
+      <class name="com.dvops.maven.eclipse.DVOPSTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:16 SGT" name="beforeTest" finished-at="2023-02-04T21:25:17 SGT" duration-ms="944" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testAddDog()[pri:0, instance:com.dvops.maven.eclipse.DogCollectionTest@5f683daf]" started-at="2023-02-02T22:00:22 SGT" name="testAddDog" finished-at="2023-02-02T22:00:22 SGT" duration-ms="3" status="PASS">
+        </test-method> <!-- beforeTest -->
+        <test-method signature="checkDogDesc()[pri:0, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:17 SGT" name="checkDogDesc" finished-at="2023-02-04T21:25:20 SGT" duration-ms="2669" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddDog -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dvops.maven.eclipse.DogCollectionTest@5f683daf]" started-at="2023-02-02T22:00:22 SGT" name="tearDown" finished-at="2023-02-02T22:00:22 SGT" duration-ms="0" status="PASS">
+        </test-method> <!-- checkDogDesc -->
+        <test-method signature="checkSignUp()[pri:1, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:20 SGT" name="checkSignUp" finished-at="2023-02-04T21:25:20 SGT" duration-ms="414" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.dvops.maven.eclipse.DogCollectionTest@5f683daf]" started-at="2023-02-02T22:00:22 SGT" name="setUp" finished-at="2023-02-02T22:00:22 SGT" duration-ms="0" status="PASS">
+        </test-method> <!-- checkSignUp -->
+        <test-method signature="checkLogin()[pri:2, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:20 SGT" name="checkLogin" finished-at="2023-02-04T21:25:20 SGT" duration-ms="368" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testGetAllDog()[pri:0, instance:com.dvops.maven.eclipse.DogCollectionTest@5f683daf]" started-at="2023-02-02T22:00:22 SGT" name="testGetAllDog" finished-at="2023-02-02T22:00:22 SGT" duration-ms="1" status="PASS">
+        </test-method> <!-- checkLogin -->
+        <test-method signature="checkLogOut()[pri:3, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:20 SGT" name="checkLogOut" finished-at="2023-02-04T21:25:21 SGT" duration-ms="209" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetAllDog -->
-        <test-method signature="testGetOneDog()[pri:0, instance:com.dvops.maven.eclipse.DogCollectionTest@5f683daf]" started-at="2023-02-02T22:00:22 SGT" name="testGetOneDog" finished-at="2023-02-02T22:00:22 SGT" duration-ms="1" status="PASS">
+        </test-method> <!-- checkLogOut -->
+        <test-method signature="checkUpdateUser()[pri:3, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:21 SGT" name="checkUpdateUser" finished-at="2023-02-04T21:25:21 SGT" duration-ms="752" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetOneDog -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dvops.maven.eclipse.DogCollectionTest@5f683daf]" started-at="2023-02-02T22:00:22 SGT" name="tearDown" finished-at="2023-02-02T22:00:22 SGT" duration-ms="0" status="PASS">
+        </test-method> <!-- checkUpdateUser -->
+        <test-method signature="checkDeleteUser()[pri:4, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:21 SGT" name="checkDeleteUser" finished-at="2023-02-04T21:25:22 SGT" duration-ms="644" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.dvops.maven.eclipse.DogCollectionTest@5f683daf]" started-at="2023-02-02T22:00:22 SGT" name="setUp" finished-at="2023-02-02T22:00:22 SGT" duration-ms="0" status="PASS">
+        </test-method> <!-- checkDeleteUser -->
+        <test-method signature="checkListReviews()[pri:5, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:22 SGT" name="checkListReviews" finished-at="2023-02-04T21:25:22 SGT" duration-ms="204" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.dvops.maven.eclipse.DogCollectionTest@5f683daf]" started-at="2023-02-02T22:00:22 SGT" name="tearDown" finished-at="2023-02-02T22:00:22 SGT" duration-ms="0" status="PASS">
+        </test-method> <!-- checkListReviews -->
+        <test-method signature="checkAddReview()[pri:6, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:22 SGT" name="checkAddReview" finished-at="2023-02-04T21:25:23 SGT" duration-ms="652" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.dvops.maven.eclipse.DogCollectionTest -->
+        </test-method> <!-- checkAddReview -->
+        <test-method signature="checkEditReview()[pri:7, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:23 SGT" name="checkEditReview" finished-at="2023-02-04T21:25:24 SGT" duration-ms="857" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEditReview -->
+        <test-method signature="checkDeleteReview()[pri:8, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:24 SGT" name="checkDeleteReview" finished-at="2023-02-04T21:25:24 SGT" duration-ms="723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDeleteReview -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.dvops.maven.eclipse.DVOPSTest@68e965f5]" started-at="2023-02-04T21:25:24 SGT" name="afterTest" finished-at="2023-02-04T21:25:24 SGT" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.dvops.maven.eclipse.DVOPSTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

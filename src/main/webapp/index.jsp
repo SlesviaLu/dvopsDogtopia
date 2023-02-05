@@ -19,7 +19,7 @@
 <body>
 	<nav class="navbar">
 		<div>
-			<a href="<%=request.getContextPath()%>/index.jsp"><img class="logo" src="<%=request.getContextPath()%>/DVOPS-DOGTOPIA.jpg"
+			<a href="<%=request.getContextPath()%>/DogServlet/home"><img class="logo" src="<%=request.getContextPath()%>/DVOPS-DOGTOPIA.jpg"
 				width="18%"> </a>
 			<div class="tabs">
 				<a id="homeNav" class="top_title_main" href="index.jsp"> HOME</a> 

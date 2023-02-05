@@ -14,10 +14,11 @@
 <body style="background-color: #FAF0CA;">
 	<nav class="navbar navbar-expand-md">
 		<div>
-			<img class="logo" src="DVOPS-DOGTOPIA.jpg" width="18%">
+			<a href="<%=request.getContextPath()%>/DogServlet/home"><img class="logo" src="<%=request.getContextPath()%>/DVOPS-DOGTOPIA.jpg"
+				width="18%"> </a>
 			<div class="tabs">
-				<a class="top_title" href="index.jsp"> HOME</a> <a
-					class="top_title_main" href="about-us.jsp"> ABOUT US</a>
+				<a id="homeNav" class="top_title" href="<%=request.getContextPath()%>/DogServlet/home"> HOME</a> 
+				<a id="aboutUsNav" class="top_title_main" href="<%=request.getContextPath()%>/about-us.jsp"> ABOUT US</a> 
 				<c:if test='${sessionScope.username == null}'>
 					<a class="top_title" href="signUp.jsp"> Sign Up</a>
 				</c:if>
